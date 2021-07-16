@@ -1,0 +1,24 @@
+name: 🚀 Deployment to all-inkl 
+
+on:
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - master
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: w01bd2ee.kasserver.com
+        username: w01bd2ee
+        password: ${{ secrets.FTP_PASSWORD }}

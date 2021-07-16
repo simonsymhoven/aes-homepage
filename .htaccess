@@ -1,0 +1,10 @@
+ErrorDocument 404 /page-404.html
+Redirect 301 /index.html /under-construction.html
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.aries-et-scorpio.de$ [NC]
+RewriteRule ^(.*)$ http://aries-et-scorpio.de/$1 [L,R=301]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.aries-et-scorpio.de$ [NC]
+RewriteRule ^(.*)$ http://www.aries-et-scorpio.de/$1 [L,R=301]

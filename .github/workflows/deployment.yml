@@ -22,3 +22,4 @@ jobs:
         server: w01bd2ee.kasserver.com
         username: w01bd2ee
         password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: aries-et-scorpio.de/

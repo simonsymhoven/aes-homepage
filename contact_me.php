@@ -33,20 +33,15 @@ if($_POST)
 	$user_Message = str_replace("\&#39;", "'", $user_Message);
 	$user_Message = str_replace("&#39;", "'", $user_Message);
 	
-	//additional php validation
-	if(strlen($user_Name)<4) // If length is less than 4 it will throw an HTTP error.
-	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Name is too short or empty!'));
-		die($output);
-	}
+	
 	if(!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) //email validation
 	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Please enter a valid email!'));
+		$output = json_encode(array('type'=>'error', 'text' => 'Bitte geben Sie eine gültige Email-Adresse an!'));
 		die($output);
 	}
 	if(strlen($user_Message)<5) //check emtpy message
 	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Too short message! Please enter something.'));
+		$output = json_encode(array('type'=>'error', 'text' => 'Nachricht zu kurz! Bitte beschreiben Sie Ihr Anliegen.'));
 		die($output);
 	}
 	
@@ -59,10 +54,10 @@ if($_POST)
 	
 	if(!$sentMail)
 	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Could not send mail! Please check your PHP mail configuration.'));
+		$output = json_encode(array('type'=>'error', 'text' => 'Mail konnte nicht gesendet werden! Bitte überprüfen Sie Ihre PHP-Mail-Konfiguration.'));
 		die($output);
 	}else{
-		$output = json_encode(array('type'=>'message', 'text' => 'Hi '.$user_Name .'! Thank you for your email'));
+		$output = json_encode(array('type'=>'message', 'text' => 'Hallo '.$user_Name .'! Vielen Dank für Ihre Email. Wir werden und schnellstmöglich mit Ihnen in Verbindung setzen.'));
 		die($output);
 	}
 }

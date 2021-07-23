@@ -1145,7 +1145,7 @@ a.btn-mod:focus{
     position: absolute;
     bottom: 0;
     left: 50%;
-    background: #fff;
+    background: #004225;
     
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -1178,7 +1178,7 @@ a.btn-mod:focus{
     position: absolute;
     left: 50%;
     bottom: 4px;
-    color: #111;
+    color: #fff;
     font-size: 15px;
 
     -webkit-animation: scroll-down-anim 1s infinite;
@@ -3034,6 +3034,12 @@ a.logo:hover{
     -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+.team-item-image .qr-code {
+    width:100px;
+    height:100px;
+    margin:15px;
 }
 
 .team-item-detail{
@@ -5748,7 +5754,7 @@ section:hover .small-item-carousel .owl-next{
     position: absolute;
     top:0;
     left: 0;
-    background: #58bf44;
+    background: #004225;
     
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;

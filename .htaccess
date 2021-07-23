@@ -2,8 +2,6 @@ Options +FollowSymLinks
 
 ErrorDocument 404 /page-404.html
 
-Redirect 301 /index.html /under-construction.html
-
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://aries-et-scorpio.de/$1 [R,L]

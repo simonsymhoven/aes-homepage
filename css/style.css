@@ -14,6 +14,7 @@ Primary use: MultiPurpose Template
 
 @font-face {
     font-family: 'Geosans';
+    font-dispay: swap;
     font-style: normal;
     font-weight: normal;
     src: local('Geosans'), url('../fonts/GeosansLight.woff') format('woff'), url('../fonts/GeosansLight.ttf') format('truetype');

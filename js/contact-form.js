@@ -52,7 +52,8 @@ $(document).ready(function(){
                     output = '<div class="success">' + response.text + '</div>';
                     
                     //reset values in all input fields
-                    $('#contact_form input').attr('checked', false);
+                    $('input[name=legal]').attr('checked', false);
+                    $('span[name=legal]').css('color', '#000000')
                     $('#contact_form input').val('');
                     $('#contact_form textarea').val('');
                    
@@ -69,6 +70,8 @@ $(document).ready(function(){
     //reset previously set border colors and hide all message on .keyup()
     $("#contact_form input, #contact_form textarea").keyup(function(){
         $("#contact_form input, #contact_form textarea").css({'border-color': '', 'color': '#000000'});
+        $('span[name=legal]').css('color', '#000000')
+        $('input[name=legal]').attr('checked', false);
         $("#result").slideUp();
     });
     

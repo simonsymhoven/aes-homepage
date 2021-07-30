@@ -53,7 +53,7 @@ $(document).ready(function(){
                     
                     //reset values in all input fields
                     $('input[name=legal]').attr('checked', false);
-                    $('span[name=legal]').css('color', '#000000')
+                    $('#legal-description').css('color', '#000000')
                     $('#contact_form input').val('');
                     $('#contact_form textarea').val('');
                    

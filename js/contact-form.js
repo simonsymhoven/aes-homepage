@@ -52,11 +52,10 @@ $(document).ready(function(){
                     output = '<div class="success">' + response.text + '</div>';
                     
                     //reset values in all input fields
-                    $('input[name=legal]').attr('checked', false);
+                    $('input[name=legal]').prop('checked', false);
                     $('#legal-description').css('color', '#000000')
                     $('#contact_form input').val('');
                     $('#contact_form textarea').val('');
-                   
                 }
                 
                 $("#result").hide().html(output).slideDown();
@@ -66,12 +65,12 @@ $(document).ready(function(){
         
         return false;
     });
-    
+
     //reset previously set border colors and hide all message on .keyup()
     $("#contact_form input, #contact_form textarea").keyup(function(){
         $("#contact_form input, #contact_form textarea").css({'border-color': '', 'color': '#000000'});
-        $('span[name=legal]').css('color', '#000000')
-        $('input[name=legal]').attr('checked', false);
+        $('input[name=legal]').prop('checked', false);
+        $('#legal-description').css('color', '#000000')
         $("#result").slideUp();
     });
     
